@@ -1,4 +1,4 @@
-# rails-timeago [![Gem Version](https://badge.fury.io/rb/rails-timeago.png)](http://badge.fury.io/rb/rails-timeago) [![Build Status](https://travis-ci.org/jgraichen/rails-timeago.png?branch=master)](https://travis-ci.org/jgraichen/rails-timeago) [![Code Climate](https://codeclimate.com/github/jgraichen/rails-timeago.png)](https://codeclimate.com/github/jgraichen/rails-timeago) [![Dependency Status](https://gemnasium.com/jgraichen/rails-timeago.png)](https://gemnasium.com/jgraichen/rails-timeago)
+# rails-timeago
 
 **rails-timeago** provides a timeago_tag helper to create time tags usable for
 [jQuery Timeago](https://github.com/rmm5t/jquery-timeago) plugin.
@@ -79,23 +79,7 @@ A global limit should always be given as a block that will be evaluated each tim
 
 ## I18n
 
-**rails-timeago 2** ships with a modified version of jQuery timeago that allows to include all locale files at once and set the locale via an option or per element via the `lang` attribute:
-
-```erb
-<%= timeago_tag Time.zone.now, :lang => :de %>
-```
-
-The following snippet will print a script tag that set the jQuery timeago locale according to your `I18n.locale`:
-
-```erb
-<%= timeago_script_tag %>
-```
-
-Just insert it in your application layout's html head. If you use another I18n framework for JavaScript you can also directly set `jQuery.timeago.settings.lang`. For example:
-
-```js
-jQuery.timeago.settings.lang = $('html').attr('lang')
-````
+**rails-timeago 2** sets by default the locale according to `I18n.locale`.
 
 Do not forget to require the needed locale files by either require `rails-timeago-all` in your `application.js` file or require specific locale files:
 

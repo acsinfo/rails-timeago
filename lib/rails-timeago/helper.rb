@@ -36,6 +36,8 @@ module Rails
       # All other options will be given as options to tag helper.
       #
       def timeago_tag(time, html_options = {})
+        html_options.merge!(lang: I18n.locale)
+        
         time_options = Rails::Timeago.default_options
 
         time_options = time_options.merge html_options.extract!(*time_options.keys.select{|k| html_options.include?(k)})

@@ -58,7 +58,7 @@ Set a limit for time ago tags. All dates before given limit will not be converte
 
 **force**
 Force time ago tag ignoring limit option.
-(default: `false`)
+(default: `true`)
 
 **default**
 String that will be returned if time is `nil`.

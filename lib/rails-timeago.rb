@@ -40,7 +40,7 @@ module Rails
     #
     # [:+force+]
     #   Force time ago tag ignoring limit option.
-    #   (default: false)
+    #   (default: true)
     #
     # [:+default+]
     #   String that will be returned if time is nil.
@@ -63,7 +63,7 @@ module Rails
     def self.option_hash
       {
         :nojs      => false,
-        :force     => false,
+        :force     => true,
         :format    => :default,
         :limit     => proc { 4.days.ago },
         :date_only => true,
